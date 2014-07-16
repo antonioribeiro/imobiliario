@@ -1,0 +1,7 @@
+Imobiliario\Users\User:
+  first_name: $string
+  email: $string@example.com
+  password: $string
+  created_at: $date
+  updated_at: $date
+

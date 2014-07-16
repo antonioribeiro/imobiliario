@@ -1,0 +1,29 @@
+<?php
+
+use PragmaRX\Support\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+class $CLASS$ extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function migrateUp()
+	{
+		$UP$
+	}
+
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function migrateDown()
+	{
+		$DOWN$
+	}
+
+}
