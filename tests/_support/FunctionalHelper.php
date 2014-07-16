@@ -29,7 +29,22 @@ class FunctionalHelper extends \Codeception\Module
 
 	public function haveAnAccount($overrides = [])
 	{
-		TestDummy::create('Imobiliario\Users\User', $overrides);
+		return $this->have('Imobiliario\Users\User', $overrides);
+	}
+
+	public function postAStatus($body)
+	{
+		$I = $this->getModule('Laravel4');
+
+		$I->fillField('body', $body);
+		$I->click('Post Status');
+
+		// return $this->have('Imobiliario\Statuses\Status', $overrides);
+	}
+
+	private function have($model, $overrides = [])
+	{
+		return TestDummy::create($model, $overrides);
 	}
 
 }

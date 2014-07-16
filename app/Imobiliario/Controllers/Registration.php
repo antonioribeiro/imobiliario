@@ -49,7 +49,7 @@ class Registration extends BaseController {
 	/**
 	 * @return mixed
 	 */
-	public function insert()
+	public function store()
 	{
 		$this->registrationForm->validate(Input::all());
 

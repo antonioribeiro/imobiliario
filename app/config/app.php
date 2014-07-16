@@ -123,7 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 //		'PragmaRX\Tracker\Vendor\Laravel\ServiceProvider',
-//		'PragmaRX\Firewall\Vendor\Laravel\ServiceProvider',
+		'PragmaRX\Firewall\Vendor\Laravel\ServiceProvider',
 		'PragmaRX\SqlI\Vendor\Laravel\ServiceProvider',
 
 		'Way\Generators\GeneratorsServiceProvider',

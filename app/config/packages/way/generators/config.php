@@ -8,19 +8,19 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'model_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/model.txt',
+    'model_template_path' => 'app/templates/model.txt',
 
-    'scaffold_model_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/scaffolding/model.txt',
+    'scaffold_model_template_path' => 'app/templates/scaffolding/model.txt',
 
-    'controller_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/controller.txt',
+    'controller_template_path' => 'app/templates/controller.txt',
 
-    'scaffold_controller_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/scaffolding/controller.txt',
+    'scaffold_controller_template_path' => 'app/templates/scaffolding/controller.txt',
 
-    'migration_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/migration.txt',
+    'migration_template_path' => 'app/templates/migration.txt',
 
-    'seed_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/seed.txt',
+    'seed_template_path' => 'app/templates/seed.txt',
 
-    'view_template_path' => '/mnt/BeijaFlor/!Development/imobiliar.io/app/templates/view.txt',
+    'view_template_path' => 'app/templates/view.txt',
 
 
     /*

@@ -5,3 +5,9 @@ Imobiliario\Users\User:
   created_at: $date
   updated_at: $date
 
+Imobiliario\Statuses\Status:
+  user_id:
+    type: Imobiliario\Users\User
+  body: $text
+  created_at: $date
+  updated_at: $date

@@ -44,9 +44,8 @@
 							</ul>
 						</li>
 					@else
-						<li>
-							<a href="/login">Login</a>
-						</li>
+						<li>{{ link_to_route('register.create', 'Register') }}</li>
+						<li>{{ link_to_route('login', 'Login') }}</li>
 					@endif
 				</ul>
 		</div><!-- /.navbar-collapse -->
