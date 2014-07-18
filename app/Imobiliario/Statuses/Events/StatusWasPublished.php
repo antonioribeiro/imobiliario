@@ -9,7 +9,7 @@
 namespace Imobiliario\Statuses\Events;
 
 
-class StatusPublished {
+class StatusWasPublished {
 
 	public $body;
 

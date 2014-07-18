@@ -1,7 +1,7 @@
 actor: Tester
 paths:
     tests: tests
-    log: tests/_output
+    log: tests/_log
     data: tests/_data
     helpers: tests/_support
 settings:
@@ -15,3 +15,5 @@ modules:
             user: ''
             password: ''
             dump: tests/_data/dump.sql
+        Laravel4:
+            cleanup: true

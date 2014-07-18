@@ -2,7 +2,7 @@
 
 $I = new FunctionalTester($scenario);
 $I->am('a guest');
-$I->wantTo('sign up for a imobiliario.io account');
+$I->wantTo('Sign up for a imobiliario.io account');
 
 $I->amOnPage('/');
 $I->click('Sign Up!');
@@ -16,7 +16,6 @@ $I->click('Sign Up');
 $I->seeCurrentUrlEquals('');
 $I->see('Welcome to Imobiliar.io');
 $I->see('Glad to have you as');
-$I->dontSee('Sign Up');
 
 $I->seeRecord('users', [
 	'email' => 'acr@imobiliar.io',
@@ -24,3 +23,5 @@ $I->seeRecord('users', [
 ]);
 
 $I->assertTrue(Auth::check());
+
+$I->dontSee('Sign Up');

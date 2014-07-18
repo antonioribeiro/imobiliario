@@ -1,6 +1,6 @@
 <?php
 
-namespace Imobiliario\Registration;
+namespace Imobiliario\Statuses;
 
 use Illuminate\Support\Facades\Input;
 use Imobiliario\Statuses\Status;
@@ -29,7 +29,7 @@ class PostStatusCommandHandler implements CommandHandler {
 	{
 		$status = Status::publish($command->body);
 
-		$this->repository->publish($status);
+		$this->repository->save($status, $command->user_id);
 
 		$this->dispatchEventsFor($status);
 

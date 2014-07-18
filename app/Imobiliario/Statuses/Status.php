@@ -3,7 +3,7 @@
 namespace Imobiliario\Statuses;
 
 use Imobiliario\Core\BaseModel;
-use Imobiliario\Statuses\Events\StatusPublished;
+use Imobiliario\Statuses\Events\StatusWasPublished;
 use Laracasts\Commander\Events\EventGenerator;
 
 class Status extends BaseModel {
@@ -29,8 +29,9 @@ class Status extends BaseModel {
 	{
 		$status = new static(compact('body'));
 
-		$status->raise(new StatusPublished($status));
+		$status->raise(new StatusWasPublished($status));
 
 		return $status;
 	}
+
 }

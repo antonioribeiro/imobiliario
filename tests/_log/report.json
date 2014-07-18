@@ -1,0 +1,35 @@
+{
+    "event": "suiteStart",
+    "suite": "integration",
+    "tests": 2
+}{
+    "event": "testStart",
+    "suite": "integration",
+    "test": "StatusRepositoryTest::it_gets_all_statuses_for_a_user"
+}{
+    "event": "test",
+    "suite": "integration",
+    "test": "StatusRepositoryTest::it_gets_all_statuses_for_a_user",
+    "status": "pass",
+    "time": 2.7801330089569,
+    "trace": [
+
+    ],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "integration",
+    "test": "StatusRepositoryTest::it_saves_a_status_for_a_specific_user"
+}{
+    "event": "test",
+    "suite": "integration",
+    "test": "StatusRepositoryTest::it_saves_a_status_for_a_specific_user",
+    "status": "pass",
+    "time": 0.85958695411682,
+    "trace": [
+
+    ],
+    "message": "",
+    "output": ""
+}

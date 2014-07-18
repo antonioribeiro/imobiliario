@@ -10,12 +10,15 @@ use Illuminate\Support\Facades\Hash;
 use Imobiliario\Core\BaseModel;
 use Imobiliario\Registration\Events\UserRegistered;
 use Laracasts\Commander\Events\EventGenerator;
+use Laracasts\Presenter\PresentableTrait;
 
 class User extends BaseModel implements UserInterface, RemindableInterface {
 
-	use UserTrait, RemindableTrait, EventGenerator;
+	use UserTrait, RemindableTrait, EventGenerator, PresentableTrait;
 
 	protected $fillable = ['first_name', 'email', 'password'];
+
+	protected $presenter = 'Imobiliario\Users\UserPresenter';
 
 	/**
 	 * The database table used by the model.
@@ -52,4 +55,10 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 		$this->attributes['password'] = Hash::make($password);
 	}
+
+	public function statuses()
+	{
+		return $this->hasMany('Imobiliario\Statuses\Status');
+	}
+
 }

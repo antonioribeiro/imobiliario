@@ -7,11 +7,11 @@
 
 			@include('layouts.partials.errors')
 
-			{{ Form::open(['route' => 'status.store']) }}
+			{{ Form::open(['route' => 'statuses.store']) }}
 
 				<div class="form-group">
-					{{ Form::label('status', 'Status:') }}
-					{{ Form::textarea('status', null, ['class' => 'form-control', 'required' => 'required']) }}
+					{{ Form::label('body', 'Status:') }}
+					{{ Form::textarea('body', null, ['class' => 'form-control', 'required' => 'required']) }}
 				</div>
 
 				<div class="form-group">
@@ -19,6 +19,16 @@
 				</div>
 
 			{{ Form::close() }}
+
+			<h2>Statuses</h2>
+
+			<ul>
+				@foreach($statuses as $status)
+					<li>
+						{{ $status->body }}
+					</li>
+				@endforeach
+			</ul>
 		</div>
 	</div>
 @stop

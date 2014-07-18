@@ -28,6 +28,7 @@
 					</ul>
 				</li>
 			</ul>
+
 			<form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
@@ -35,19 +36,24 @@
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 
-				<ul class="nav navbar-nav navbar-right">
-					@if($currentUser)
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$currentUser->first_name}} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="/logout">Logout</a></li>
-							</ul>
-						</li>
-					@else
-						<li>{{ link_to_route('register.create', 'Register') }}</li>
-						<li>{{ link_to_route('login', 'Login') }}</li>
-					@endif
-				</ul>
+			<ul class="nav navbar-nav navbar-right">
+				@if($currentUser)
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="{{ $currentUser->present()->gravatar() }}" class="nav-gravatar" alt="{{ $currentUser->first_name }}">
+
+							{{$currentUser->first_name}} <span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="/logout">Logout</a></li>
+						</ul>
+					</li>
+				@else
+					<li>{{ link_to_route('register.create', 'Register') }}</li>
+					<li>{{ link_to_route('login', 'Login') }}</li>
+				@endif
+			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>
 </nav>

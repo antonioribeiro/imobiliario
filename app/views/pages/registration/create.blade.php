@@ -7,7 +7,7 @@
 
 			@include('layouts.partials.errors')
 
-			{{ Form::open(['route' => 'register.insert']) }}
+			{{ Form::open(['route' => 'register.store']) }}
 
 				<div class="form-group">
 					{{ Form::label('first_name', 'Name:') }}

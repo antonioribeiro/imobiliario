@@ -1,15 +1,19 @@
 <?php
 
-namespace Imobiliario\Registration;
+namespace Imobiliario\Statuses;
 
 
 class PostStatusCommand {
 
 	public $body;
 
-	function __construct($body)
+	public $user_id;
+
+	function __construct($body, $user_id)
 	{
 		$this->body = $body;
+
+		$this->user_id = $user_id;
 	}
 
 } 

@@ -1,5 +1,7 @@
 <?php
 
+Route::when('*', 'csrf', ['post', 'patch']);
+
 Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 {
 	Route::get('/', ['as' => 'home', 'uses' => 'Pages@home']);
@@ -14,7 +16,7 @@ Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Sessions@destroy']);
 
-	Route::get('statuses', ['as' => 'status', 'uses' => 'Status@index']);
+	Route::get('statuses', ['as' => 'statuses.index', 'uses' => 'Statuses@index']);
 
-	Route::post('statuses', ['as' => 'status.store', 'uses' => 'Status@store']);
+	Route::post('statuses', ['as' => 'statuses.store', 'uses' => 'Statuses@store']);
 });
