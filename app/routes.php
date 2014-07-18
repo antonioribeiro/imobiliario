@@ -19,4 +19,6 @@ Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 	Route::get('statuses', ['as' => 'statuses.index', 'uses' => 'Statuses@index']);
 
 	Route::post('statuses', ['as' => 'statuses.store', 'uses' => 'Statuses@store']);
+
+	Route::get('realestate', ['as' => 'realestate', 'uses' => 'RealEstates@index']);
 });

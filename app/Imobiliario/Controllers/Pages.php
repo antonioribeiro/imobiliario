@@ -15,7 +15,7 @@ class Pages extends Controller {
 
 	public function home()
 	{
-		return View::make('pages.home');
+		return View::make('home');
 	}
 
 } 

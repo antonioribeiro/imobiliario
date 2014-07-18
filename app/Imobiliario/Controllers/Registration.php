@@ -43,7 +43,7 @@ class Registration extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('pages.registration.create');
+		return View::make('registration.create');
 	}
 
 	/**

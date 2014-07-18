@@ -18,7 +18,7 @@ class StatusRepository {
 	{
 		if ($user)
 		{
-			return $user->statuses()->get();
+			return $user->statuses()->with('user')->latest()->get();
 		}
 
 		return Status::all();

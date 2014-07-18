@@ -5,10 +5,11 @@ namespace Imobiliario\Statuses;
 use Imobiliario\Core\BaseModel;
 use Imobiliario\Statuses\Events\StatusWasPublished;
 use Laracasts\Commander\Events\EventGenerator;
+use Laracasts\Presenter\PresentableTrait;
 
 class Status extends BaseModel {
 
-	use EventGenerator;
+	use EventGenerator, PresentableTrait;
 
 	protected $fillable = ['body'];
 
@@ -18,6 +19,8 @@ class Status extends BaseModel {
 	 * @var string
 	 */
 	protected $table = 'statuses';
+
+	protected $presenter = 'Imobiliario\Statuses\StatusPresenter';
 
 	/**
 	 * Publish a new status
@@ -34,4 +37,8 @@ class Status extends BaseModel {
 		return $status;
 	}
 
+	public function user()
+	{
+		return $this->belongsTo('Imobiliario\Users\User');
+	}
 }

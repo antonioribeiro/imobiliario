@@ -43,7 +43,7 @@ class Sessions extends BaseController {
 	 */
 	public function create()
 	{
-		return View::make('pages.sessions.create');
+		return View::make('sessions.create');
 	}
 
 	/**
