@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $I = new FunctionalTester($scenario);
 
@@ -12,7 +12,7 @@ $I->amOnPage('/ads');
 
 $I->seeElement('.ad');
 
-$I->click('#ad-1 .ad-delete');
+$I->click('.ad[data-id="1"] .ad-delete');
 
 $I->waitForJs("return $('input[value=\"Sign In\"]').is(':visible');", 10);
 
@@ -26,6 +26,6 @@ $I->amOnPage('/ads');
 
 $I->seeElement('.ad');
 
-$I->click('#ad-1 .ad-delete');
+$I->click('.ad[data-id="1"] .ad-delete');
 
-$I->dontSeeElement('#ad-1');
+$I->dontSeeElement('.ad[data-id="1"] .ad-delete');

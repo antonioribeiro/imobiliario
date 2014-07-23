@@ -26,8 +26,8 @@
       <file leaf-file-name="BrowseAdsCept.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/functional/BrowseAdsCept.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2573991" vertical-offset="217" max-vertical-offset="1332">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.3865471" vertical-offset="217" max-vertical-offset="1332">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/app/Imobiliario/Controllers/UserAds.php" />
         <option value="$PROJECT_DIR$/app/Imobiliario/Domains/UserAds/User.php" />
         <option value="$PROJECT_DIR$/tests/functional.suite.yml" />
-        <option value="$PROJECT_DIR$/app/views/ads/partials/ad.blade.php" />
         <option value="$PROJECT_DIR$/tests/functional/BrowseAdsCept.php" />
+        <option value="$PROJECT_DIR$/app/views/ads/partials/ad.blade.php" />
       </list>
     </option>
   </component>
@@ -1740,15 +1740,15 @@
     <entry file="file://$PROJECT_DIR$/app/views/ads/partials/ad.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032667875" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/functional/BrowseAdsCept.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2573991" vertical-offset="217" max-vertical-offset="1332">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.3865471" vertical-offset="217" max-vertical-offset="1332">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

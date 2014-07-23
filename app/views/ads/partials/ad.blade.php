@@ -1,5 +1,5 @@
 <!-- Begin Listing: 701 W ALLENS LN-->
-<div class="ad brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" id="ad-{{ $ad->id }}">
+<div class="ad brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" id="ad-{{ $ad->id }}" data-id="{{ $ad->id }}">
     <div class="media">
 	    <div class="col-md-3" style="margin-left: -15px;">
 		    <img alt="image" class="img-responsive" src="http://lorempixel.com/200/150/city/?x={{rand()}}"></a>
