@@ -31,7 +31,7 @@ return [
     */
     'model_target_path'   => app_path('models'),
 
-    'controller_target_path'   => app_path('controllers'),
+    'controller_target_path'   => app_path('Imobiliario/Controllers'),
 
     'migration_target_path'   => app_path('database/migrations'),
 

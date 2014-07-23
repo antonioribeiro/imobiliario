@@ -1,4 +1,4 @@
-Imobiliario\Users\User:
+Imobiliario\Domains\Users\User:
   first_name: $string
   email: $string@example.com
   password: $string
@@ -7,7 +7,7 @@ Imobiliario\Users\User:
 
 Imobiliario\Statuses\Status:
   user_id:
-    type: Imobiliario\Users\User
+    type: Imobiliario\Domains\Users\User
   body: $text
   created_at: $date
   updated_at: $date

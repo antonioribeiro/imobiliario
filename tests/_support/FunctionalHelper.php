@@ -29,7 +29,7 @@ class FunctionalHelper extends \Codeception\Module
 
 	public function haveAnAccount($overrides = [])
 	{
-		return $this->have('Imobiliario\Users\User', $overrides);
+		return $this->have('Imobiliario\Domains\Users\User', $overrides);
 	}
 
 	public function postAStatus($body)

@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'model' => 'Imobiliario\Users\User',
+	'model' => 'Imobiliario\Domains\Users\User',
 
 	/*
 	|--------------------------------------------------------------------------

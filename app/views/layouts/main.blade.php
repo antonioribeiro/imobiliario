@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{$assets_main}}/css/main.css">
 
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 	</head>
 
@@ -31,6 +33,8 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="{{$assets_main}}/js/main.js"></script>
 
+		<script src="{{$assets}}/vendor/bower/infinite-scroll/jquery.infinitescroll.min.js"></script>
+
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
 				(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -43,6 +47,10 @@
 
 		<script>
 			jQuery('#flash-overlay-modal').modal();
+		</script>
+
+		<script>
+			@yield('page-scripts')
 		</script>
 	</body>
 </html>

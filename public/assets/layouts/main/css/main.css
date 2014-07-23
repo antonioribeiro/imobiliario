@@ -39,6 +39,14 @@ body {
   padding: 1em;
   margin-bottom: 2em; }
 
+.col-centered {
+  float: none;
+  margin: 0 auto; }
+
+.ad .ad-icon {
+  padding-right: 10px;
+  font-size: 1.2em; }
+
 /**** LAYOUT ****/
 .list-inline > li {
   padding: 0 10px 0 0; }

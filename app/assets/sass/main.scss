@@ -49,6 +49,16 @@ body {
   margin-bottom: 2em;
 }
 
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.ad .ad-icon {
+  padding-right: 10px;
+  font-size: 1.2em;
+}
+
 /**** LAYOUT ****/
 .list-inline>li {
   padding: 0 10px 0 0;
@@ -61,10 +71,12 @@ body {
 .bgc-fff {
   background-color: #f4f4f4 !important;
 }
+
 .box-shad {
   -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
   box-shadow: 1px 1px 0 rgba(0,0,0,.2);
 }
+
 .brdr {
   border: 1px solid #ededed;
 }
@@ -73,6 +85,7 @@ body {
 .fnt-smaller {
   font-size: .9em;
 }
+
 .fnt-lighter {
   color: #bbb;
 }
@@ -115,3 +128,4 @@ body {
     max-width: 180px;
   }
 }
+

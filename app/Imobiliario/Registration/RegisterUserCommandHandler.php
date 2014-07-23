@@ -3,8 +3,8 @@
 namespace Imobiliario\Registration;
 
 use Illuminate\Support\Facades\Input;
-use Imobiliario\Users\User;
-use Imobiliario\Users\UserRepository;
+use Imobiliario\Domains\Users\User;
+use Imobiliario\Domains\Users\UserRepository;
 use Laracasts\Commander\CommandHandler;
 use Laracasts\Commander\Events\DispatchableTrait;
 

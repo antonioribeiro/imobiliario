@@ -39,7 +39,7 @@ Route::filter('auth', function()
 	{
 		if (Request::ajax())
 		{
-			return Response::make('Unauthorized', 401);
+			return Response::json(['redirect' => route('login')]);
 		}
 		else
 		{
@@ -47,7 +47,6 @@ Route::filter('auth', function()
 		}
 	}
 });
-
 
 Route::filter('auth.basic', function()
 {

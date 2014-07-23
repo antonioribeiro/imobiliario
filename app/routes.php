@@ -20,5 +20,14 @@ Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 
 	Route::post('statuses', ['as' => 'statuses.store', 'uses' => 'Statuses@store']);
 
-	Route::get('realestate', ['as' => 'realestate', 'uses' => 'RealEstates@index']);
+	Route::get('ads', ['as' => 'ads', 'uses' => 'Ads@index']);
+
+	Route::get('ads/infinite', ['as' => 'ads.infinite', 'uses' => 'Ads@infinite']);
+
+	Route::group(['prefix' => 'api/v1'], function()
+	{
+		Route::get('/', ['as' => 'api.v1', 'uses' => 'UserAds@index']);
+
+		Route::get('ads/delete/{id}', ['as' => 'ads.delete', 'uses' => 'UserAds@delete']);
+	});
 });

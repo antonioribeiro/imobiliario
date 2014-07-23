@@ -24,7 +24,7 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
 	 */
 	public function it_gets_all_statuses_for_a_user()
     {
-		$users = TestDummy::times(2)->create('Imobiliario\Users\User');
+		$users = TestDummy::times(2)->create('Imobiliario\Domains\Users\User');
 
 	    TestDummy::times(2)->create('Imobiliario\Statuses\Status', [
 			'user_id' => $users[0]->id,
@@ -48,7 +48,7 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
 			'body' => 'His Status',
 		]);
 
-		$user = TestDummy::create('Imobiliario\Users\User');
+		$user = TestDummy::create('Imobiliario\Domains\Users\User');
 
 		$savedStatus = $this->repo->save($status, $user->id);
 

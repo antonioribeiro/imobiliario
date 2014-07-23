@@ -15,15 +15,19 @@ class CreateAddressesTable extends Migration {
 		Schema::create('addresses', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('street');
-			$table->string('number');
-			$table->string('neighborhood');
-			$table->string('city');
+
+			// A realty must always have at least the country, state and city
 			$table->integer('state_id')->unsigned();
+			$table->string('city');
 			$table->string('country_id', 3);
-			$table->string('zipcode', 9);
+
+			$table->string('street')->nullable();
+			$table->string('number')->nullable();
+			$table->string('neighborhood')->nullable();
+			$table->string('zipcode', 9)->nullable();
 			$table->float('latitude')->nullable();
 			$table->float('longitude')->nullable();
+
 			$table->timestamps();
 		});
 	}
