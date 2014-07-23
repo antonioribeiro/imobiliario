@@ -52,4 +52,16 @@ class Realty extends BaseModel {
 	{
 		return $this->belongsTo('Imobiliario\Domains\UnitTypes\UnitType', 'unit_type_id');
 	}
+
+	public function ads()
+	{
+		return $this->hasMany('Imobiliario\Domains\Ads\Ad');
+	}
+
+	public function cheapest()
+	{
+		$result = $this->ads()->orderBy('ads.price', 'desc')->getResults();
+
+		return $result->first();
+	}
 }

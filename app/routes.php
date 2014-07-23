@@ -1,5 +1,16 @@
 <?php
 
+use Imobiliario\Domains\Realties\Realty;
+
+Route::any('test', function()
+{
+	$r = Realty::first();
+
+	dd($r->present()->cheapest);
+
+	dd($r->present()->address->neighborhood);
+});
+
 Route::when('*', 'csrf', ['post', 'patch']);
 
 Route::group(['namespace' => 'Imobiliario\Controllers'], function()

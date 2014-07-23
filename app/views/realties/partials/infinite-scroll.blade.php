@@ -28,7 +28,7 @@ jQuery('#ads').infinitescroll({
 	maxPage         : 100,
 	prefill			: true,
 	path            : function(index) {
-							return "{{ route('ads.infinite') }}?page=" + index;
+							return "{{ route('realties.infinite') }}?page=" + index;
 						},
 
     behavior        : undefined,

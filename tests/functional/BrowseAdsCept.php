@@ -10,7 +10,7 @@ $I->wantTo('browse the ads page');
 
 $I->amOnPage('/ads');
 
-$I->seeElement('.ad');
+$I->seeElement('.ad[data-id="1"]');
 
 $I->click('.ad[data-id="1"] .ad-delete');
 

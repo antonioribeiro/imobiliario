@@ -32,6 +32,6 @@ class UsersRealties extends BaseController {
 	{
 		$ads = Ad::paginate(15);
 
-		return View::make('ads.infinite', compact('ads'));
+		return View::make('realties.infinite', compact('ads'));
 	}
 }
