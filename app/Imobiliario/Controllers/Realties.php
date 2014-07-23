@@ -15,19 +15,19 @@ use View;
 use Input;
 use Auth;
 
-class Ads extends BaseController {
+class Realties extends BaseController {
 
 	public function index()
 	{
-		$ads = Ad::paginate(15);
+		$realties = Realty::paginate(15);
 
-		return View::make('ads.index', compact('ads'));
+		return View::make('realties.index', compact('realties'));
 	}
 
 	public function infinite()
 	{
-		$ads = Ad::paginate(15);
+		$realties = Realty::paginate(15);
 
-		return View::make('ads.infinite', compact('ads'));
+		return View::make('realties.infinite', compact('realties'));
 	}
 }

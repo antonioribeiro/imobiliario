@@ -1,8 +1,8 @@
 <div class="col-sm-8">
 	<div class="row">
 		<div id="ads">
-			@foreach($ads as $ad)
-				@include('ads.partials.ad')
+			@foreach($realties as $realty)
+				@include('realties.partials.realty')
 			@endforeach
 
 			<a href="#" id="next" class="pagination">Next Page</a>

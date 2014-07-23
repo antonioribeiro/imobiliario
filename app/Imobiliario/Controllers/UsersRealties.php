@@ -15,7 +15,7 @@ use View;
 use Input;
 use Auth;
 
-class UserAds extends BaseController {
+class UsersRealties extends BaseController {
 
 	public function __construct()
 	{

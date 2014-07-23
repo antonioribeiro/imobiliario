@@ -5,7 +5,7 @@
 	    <div class="container-fluid">
 	        <div class="container container-pad" id="property-listings">
 	            <div class="row">
-		            @include('ads.infinite')
+		            @include('realties.infinite')
 
 		            <div class="col-sm-4">
 			            col 2
@@ -17,7 +17,7 @@
 @stop
 
 @section('page-scripts')
-	@include('ads.partials.infinite-scroll')
+	@include('realties.partials.infinite-scroll')
 
 	jQuery('.ad-delete').click(function()
 	{
@@ -52,5 +52,4 @@
 
 		return response;
 	}
-
 @stop

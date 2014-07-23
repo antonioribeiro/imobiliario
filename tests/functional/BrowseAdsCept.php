@@ -29,3 +29,7 @@ $I->seeElement('.ad');
 $I->click('.ad[data-id="1"] .ad-delete');
 
 $I->dontSeeElement('.ad[data-id="1"] .ad-delete');
+
+$I->reloadPage();
+
+$I->dontSeeElement('.ad[data-id="1"] .ad-delete');
