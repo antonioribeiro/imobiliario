@@ -8,9 +8,11 @@
 		</div>
 
 		<div class="col-md-6">
-			@foreach($user->statuses as $status)
-				@include('statuses.partials.status')
-			@endforeach
+			@if ($user->is($currentUser))
+				@include('statuses.partials.publish-status-form')
+			@endif
+
+			@include ('statuses.partials.statuses', ['statuses' => $user->statuses])
 		</div>
 	</div>
 

@@ -122,7 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'PragmaRX\Tracker\Vendor\Laravel\ServiceProvider',
+//		'PragmaRX\Tracker\Vendor\Laravel\ServiceProvider',
 		'PragmaRX\Firewall\Vendor\Laravel\ServiceProvider',
 		'PragmaRX\SqlI\Vendor\Laravel\ServiceProvider',
 

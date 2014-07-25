@@ -37,6 +37,7 @@ class FunctionalHelper extends \Codeception\Module
 		$I = $this->getModule('Laravel4');
 
 		$I->fillField('body', $body);
+		dd('1111');
 		$I->click('Post Status');
 
 		// return $this->have('Imobiliario\Statuses\Status', $overrides);

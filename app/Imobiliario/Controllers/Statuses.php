@@ -38,7 +38,7 @@ class Statuses extends BaseController {
 
 	public function index()
 	{
-		$statuses = $this->statusRepository->getAll(Auth::user());
+		$statuses = $this->statusRepository->getAll();
 
 		return View::make('statuses.index', compact('statuses'));
 	}
@@ -53,7 +53,7 @@ class Statuses extends BaseController {
 
 		Flash::message('Your status has been posted!');
 
-		return Redirect::refresh();
+		return Redirect::back();
 	}
 
 } 

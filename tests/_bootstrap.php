@@ -47,9 +47,9 @@ $protectedTables = ['migrations'];
 // Confirm that we are running the tests against a testing database
 $database = Config::get('database.connections.main.database');
 
-if ( ! ends_with($database, '_testing')) {
-	throw new Exception('The database you are trying to run test against is not a testing database.');
-}
+//if ( ! ends_with($database, '_testing')) {
+//	throw new Exception('The database you are trying to run test against is not a testing database.');
+//}
 
 //// Delete all the tables from our testing database
 //$tables = DB::table('information_schema.tables')->where('table_schema', $database)->get();

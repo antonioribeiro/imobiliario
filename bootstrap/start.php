@@ -31,8 +31,6 @@ foreach(require __DIR__.'/../.env.php' as $key => $value)
 
 $env = $app->detectEnvironment(function ()
 {
-	return 'testing';
-
 	if(app() && app()->make('session')->get('env'))
 	{
 		return Session::get('env');

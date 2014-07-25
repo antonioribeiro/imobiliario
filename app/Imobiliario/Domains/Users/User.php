@@ -61,4 +61,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 		return $this->hasMany('Imobiliario\Domains\Statuses\Status');
 	}
 
+	public function is(User $current)
+	{
+		return $this->id === $current->id;
+	}
 }

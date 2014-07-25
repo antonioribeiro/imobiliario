@@ -21,7 +21,7 @@ class StatusRepository {
 			return $user->statuses()->with('user')->latest()->get();
 		}
 
-		return Status::all();
+		return Status::with('user')->latest()->get();
 	}
 
 }

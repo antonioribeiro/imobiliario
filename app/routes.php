@@ -1,14 +1,12 @@
 <?php
 
-use Imobiliario\Domains\Realties\Realty;
-
 Route::any('test', function()
 {
-	$r = Realty::first();
+	d(Session::all());
 
-	dd($r->present()->cheapest);
+	Session::put('keyvalue', 'valuevalue');
 
-	dd($r->present()->address->neighborhood);
+	dd(Session::all());
 });
 
 Route::when('*', 'csrf', ['post', 'patch']);

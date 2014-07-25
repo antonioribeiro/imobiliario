@@ -36,6 +36,9 @@ class UserRepository {
 	 */
 	public function findByUsername($username)
 	{
-		return User::where('username', $username)->first();
+		return User::with(['statuses' => function($query)
+		{
+			$query->latest();
+		}])->where('username', $username)->first();
 	}
 }
