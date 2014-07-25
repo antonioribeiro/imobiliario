@@ -12,4 +12,8 @@ $I->seeInCurrentUrl('/statuses');
 
 $I->see('Welcome back!');
 
-$I->assertTrue(Auth::check());
+// Go to a page which's not supposed to have a user name, unless it is logged in
+
+$I->amOnPage('/login');
+
+$I->see('John Doe');

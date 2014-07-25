@@ -53,10 +53,10 @@ class Registration extends BaseController {
 	{
 		$this->registrationForm->validate(Input::all());
 
-		extract(Input::only(['first_name', 'email', 'password']));
+		extract(Input::only(['first_name', 'username', 'email', 'password']));
 
 		$user = $this->execute(
-			new RegisterUserCommand($first_name, $email, $password)
+			new RegisterUserCommand($first_name, $username, $email, $password)
 		);
 
 		Auth::login($user);

@@ -19,8 +19,16 @@ class CreateStatusesTable extends Migration {
 			$table->text('body');
 			$table->timestamps();
 		});
-	}
 
+		Schema::table('statuses', function(Blueprint $table)
+		{
+			$table->foreign('user_id')
+					->references('id')
+					->on('users')
+					->onUpdate('cascade')
+					->onDelete('cascade');
+		});
+	}
 
 	/**
 	 * Reverse the migrations.

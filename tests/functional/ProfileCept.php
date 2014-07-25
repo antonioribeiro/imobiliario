@@ -6,18 +6,12 @@ $I->am('an Imobiliario member');
 
 $I->wantTo('view my profile');
 
-$I->amOnPage('/statuses');
+$I->signIn();
 
-$I->postAStatus('My first post!');
+$I->postAStatus('My new status.');
 
-$I->seeRecord('statuses', [
-	'body' => 'My first post!',
-]);
+$I->click('Profile');
 
-$I->seeCurrentUrlEquals('/statuses');
+$I->seeCurrentUrlEquals('/@johndoe');
 
-// dd(Log::info(serialize(DB::table('statuses')->get())));
-
-$I->see('My first post!');
-
-//file_put_contents('/tmp/log.txt', (string) DB::table('statuses')->get(), FILE_APPEND | LOCK_EX);
+$I->see('My new status.');

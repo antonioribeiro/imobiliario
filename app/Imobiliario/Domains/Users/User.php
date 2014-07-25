@@ -16,7 +16,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait, EventGenerator, PresentableTrait;
 
-	protected $fillable = ['first_name', 'email', 'password'];
+	protected $fillable = ['first_name', 'username', 'email', 'password'];
 
 	protected $presenter = 'Imobiliario\Domains\Users\UserPresenter';
 
@@ -42,9 +42,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 * @param $password
 	 * @return static
 	 */
-	public static function register($first_name, $email, $password)
+	public static function register($first_name, $username, $email, $password)
 	{
-		$user = new static(compact('first_name', 'email', 'password'));
+		$user = new static(compact('first_name', 'username', 'email', 'password'));
 
 		$user->raise(new UserRegistered($user));
 

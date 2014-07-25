@@ -1,6 +1,7 @@
 <?php
 namespace Codeception\Module;
 
+use DB;
 use Laracasts\TestDummy\Factory as TestDummy;
 
 // here you can define custom actions
@@ -11,12 +12,16 @@ class FunctionalHelper extends \Codeception\Module
 
 	public function signIn()
 	{
+		$this->deleteAllUsers();
+
+		$first_name = 'John Doe';
 		$email = 'john@doe.com';
 		$password = 'secret';
+		$username = 'johndoe';
 
-		$this->haveAnAccount(compact('email', 'password'));
+		$this->haveAnAccount(compact('first_name', 'username', 'email', 'password'));
 
-		$I = $this->getModule('Laravel4');
+		$I = $this->getModule('WebDriver');
 
 		$I->amOnPage('/login');
 
@@ -25,6 +30,8 @@ class FunctionalHelper extends \Codeception\Module
 		$I->fillField('password', $password);
 
 		$I->click('Sign In');
+
+		$I->see($first_name);
 	}
 
 	public function haveAnAccount($overrides = [])
@@ -34,10 +41,10 @@ class FunctionalHelper extends \Codeception\Module
 
 	public function postAStatus($body)
 	{
-		$I = $this->getModule('Laravel4');
+		$I = $this->getModule('WebDriver');
 
 		$I->fillField('body', $body);
-		dd('1111');
+
 		$I->click('Post Status');
 
 		// return $this->have('Imobiliario\Statuses\Status', $overrides);
@@ -48,11 +55,27 @@ class FunctionalHelper extends \Codeception\Module
 		return TestDummy::create($model, $overrides);
 	}
 
-	public function setBrowserEnvironmentToTesting()
+	public function seeRecord($array)
 	{
-		$I = $this->getModule('Laravel4');
+		$I = $this->getLaravel4();
 
-		$I->amOnPage('/environment/set/testing');
+		$I->seeRecord($array);
 	}
 
+	private function getLaravel4()
+	{
+		if ( ! isset($this->laravel4))
+		{
+			$this->laravel4 = (new \Codeception\Module\Laravel4());
+
+			$this->laravel4->kernel = app();
+		}
+
+		return $this->laravel4;
+	}
+
+	public function deleteAllUsers()
+	{
+		DB::table('users')->delete();
+	}
 }

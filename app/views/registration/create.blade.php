@@ -15,6 +15,11 @@
 				</div>
 
 				<div class="form-group">
+					{{ Form::label('username', 'Username:') }}
+					{{ Form::text('username', null, ['class' => 'form-control']) }}
+				</div>
+
+				<div class="form-group">
 					{{ Form::label('email', 'Email:') }}
 					{{ Form::text('email', null, ['class' => 'form-control']) }}
 				</div>

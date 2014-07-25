@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		foreach($this->tables as $table)
 		{
-			DB::table($table)->truncate();
+			DB::table($table)->delete();
 		}
 	}
 

@@ -6,7 +6,7 @@
 
 class_name: FunctionalTester
 modules:
-    enabled: [Filesystem, FunctionalHelper, Laravel4, Asserts, WebDriver]
+    enabled: [Filesystem, FunctionalHelper, Asserts, WebDriver]
     config:
           Laravel4:
              cleanup: false
@@ -15,7 +15,7 @@ modules:
              url: 'http://development.imobiliar.io/'
              browser: phantomjs
              window_size: 1280x720
-             clear_cookies: false
+             clear_cookies: true
              capabilities:
                           phantomjs.cli.args: ['--ignore-ssl-errors=true']
                           webStorageEnabled: true

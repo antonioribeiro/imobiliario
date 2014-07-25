@@ -29,6 +29,7 @@ class RegisterUserCommandHandler implements CommandHandler {
 	{
 		$user = User::register(
 			$command->first_name,
+			$command->username,
 			$command->email,
 			$command->password
 		);
