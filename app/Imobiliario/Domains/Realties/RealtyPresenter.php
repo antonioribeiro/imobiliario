@@ -3,10 +3,10 @@
 namespace Imobiliario\Domains\Realties;
 
 use Illuminate\Support\Str;
-use Laracasts\Presenter\Presenter;
+use Imobiliario\Core\BasePresenter;
 use h4kuna\NumberFormat;
 
-class RealtyPresenter extends Presenter {
+class RealtyPresenter extends BasePresenter {
 
 	/**
 	 * Present the realty price, formatted.

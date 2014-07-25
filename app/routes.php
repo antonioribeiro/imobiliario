@@ -13,6 +13,14 @@ Route::any('test', function()
 
 Route::when('*', 'csrf', ['post', 'patch']);
 
+Route::any('environment/set/{env}', function($env)
+{
+	if($env !== 'production')
+	{
+		Session::put('env', $env);
+	}
+});
+
 Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 {
 	Route::get('/', ['as' => 'home', 'uses' => 'Pages@home']);
@@ -31,14 +39,24 @@ Route::group(['namespace' => 'Imobiliario\Controllers'], function()
 
 	Route::post('statuses', ['as' => 'statuses.store', 'uses' => 'Statuses@store']);
 
-	Route::get('realties', ['as' => 'realties', 'uses' => 'Realties@index']);
+	Route::group(['prefix' => 'realties'], function()
+	{
+		Route::get('/', ['as' => 'realties', 'uses' => 'Realties@index']);
 
-	Route::get('realties/infinite', ['as' => 'realties.infinite', 'uses' => 'Realties@infinite']);
+		Route::get('infinite', ['as' => 'realties.infinite', 'uses' => 'Realties@infinite']);
+	});
+
+	Route::get('@{username}', ['as' => 'users.profile', 'uses' => 'Users@show']);
+
+	Route::group(['prefix' => 'users'], function()
+	{
+		Route::get('/', ['as' => 'users.index', 'uses' => 'Users@index']);
+	});
 
 	Route::group(['prefix' => 'api/v1'], function()
 	{
-		Route::get('/', ['as' => 'api.v1', 'uses' => 'UserRealties@index']);
+		Route::get('/', ['as' => 'api.v1', 'uses' => 'UsersRealties@index']);
 
-		Route::get('realties/delete/{id}', ['as' => 'users.realties.delete', 'uses' => 'UserRealties@delete']);
+		Route::get('realties/delete/{id}', ['as' => 'users.realties.delete', 'uses' => 'UsersRealties@delete']);
 	});
 });

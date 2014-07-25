@@ -29,11 +29,18 @@ foreach(require __DIR__.'/../.env.php' as $key => $value)
 	putenv(sprintf('%s=%s', $key, $value));
 }
 
-$env = $app->detectEnvironment(function()
+$env = $app->detectEnvironment(function ()
 {
+	return 'testing';
 
-	return getenv('LARAVEL_ENV') ?: 'development';
-
+	if(app() && app()->make('session')->get('env'))
+	{
+		return Session::get('env');
+	}
+	else
+	{
+		return getenv('LARAVEL_ENV') ?: 'development';
+	}
 });
 
 /*

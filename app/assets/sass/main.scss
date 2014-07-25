@@ -41,6 +41,31 @@ body {
   }
 }
 
+// users list
+
+.users {
+  margin-bottom: 3em;
+}
+
+.users-block {
+  a {
+      text-decoration: none;
+
+  }
+
+  :hover {
+    color: #000000;
+  }
+
+  text-align: center;
+
+  .avatar {
+    margin: auto;
+  }
+}
+
+//---------------------------------------
+
 // Each indivitual status
 .status-media {
   border: 1px solid #e3e3e3;

@@ -2,30 +2,30 @@
 
 namespace Imobiliario\Controllers;
 
-use Illuminate\Support\Facades\Redirect;
+use Auth;
+use Imobiliario\Core\Redirect;
 use Imobiliario\Core\BaseController;
 use Imobiliario\Core\CommandBus;
 use Imobiliario\Domains\Ads\Ad;
-use Imobiliario\Forms\PostStatus;
-use Imobiliario\Domains\Realties\Realty;
-use Imobiliario\Domains\Statuses\PostStatusCommand;
-use Imobiliario\Domains\Statuses\StatusRepository;
-use Laracasts\Flash\Flash;
+use Imobiliario\Domains\UsersRealties\DeleteUserRealtyCommand;
 use View;
-use Input;
-use Auth;
 
 class UsersRealties extends BaseController {
+
+	use CommandBus;
 
 	public function __construct()
 	{
 		$this->beforeFilter('auth');
 	}
 
-	public function delete()
+	public function delete($realty_id)
 	{
+		$this->execute(
+			new DeleteUserRealtyCommand($realty_id, Auth::user())
+		);
 
-		return ;
+		return Redirect::home();
 	}
 
 	public function infinite()

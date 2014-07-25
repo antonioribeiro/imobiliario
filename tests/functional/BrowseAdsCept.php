@@ -8,7 +8,7 @@ $I->wantTo('browse the ads page');
 
 /// fail --- go to login
 
-$I->amOnPage('/ads');
+$I->amOnPage('/realties');
 
 $I->seeElement('.ad[data-id="1"]');
 
@@ -22,11 +22,13 @@ $I->seeCurrentUrlEquals('/login');
 
 $I->signIn();
 
-$I->amOnPage('/ads');
+$I->amOnPage('/realties');
 
 $I->seeElement('.ad');
 
 $I->click('.ad[data-id="1"] .ad-delete');
+
+$I->waitForJs("return $('.ad[data-id=\"1\"]').is(':hidden');", 10);
 
 $I->dontSeeElement('.ad[data-id="1"] .ad-delete');
 

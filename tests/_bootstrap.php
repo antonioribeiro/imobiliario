@@ -1,6 +1,9 @@
 <?php
 
-/*include __DIR__ . '/../vendor/autoload.php';
+$unitTesting = true;
+$testEnvironment = 'testing';
+
+include __DIR__ . '/../vendor/autoload.php';
 $app = require_once __DIR__ . '/../bootstrap/start.php';
 $app->boot();
 
@@ -39,24 +42,27 @@ $protectedTables = ['activations',
                     'tracker_system_classes',
                     'users'];
 
+$protectedTables = ['migrations'];
+
 // Confirm that we are running the tests against a testing database
-$database = Config::get('database.connections.mysql.database');
+$database = Config::get('database.connections.main.database');
 
-//if ( ! ends_with($database, '_testing')) {
-	//throw new Exception('The database you are trying to run test against is not a testing database.');
-//}
-
-// Delete all the tables from our testing database
-$tables = DB::table('information_schema.tables')->where('table_schema', $database)->get();
-
-foreach ($tables as $table)
-{
-	if ( ! in_array($table, $protectedTables))
-	{
-		Schema::drop($table->TABLE_NAME);
-	}
+if ( ! ends_with($database, '_testing')) {
+	throw new Exception('The database you are trying to run test against is not a testing database.');
 }
 
-// Run our migrations and seed our fresh tables
-Artisan::call('migrate');
-Artisan::call('db:seed');*/
+//// Delete all the tables from our testing database
+//$tables = DB::table('information_schema.tables')->where('table_schema', $database)->get();
+//
+//foreach ($tables as $table)
+//{
+//	if ( ! in_array($table, $protectedTables))
+//	{
+//			//		Schema::drop($table->TABLE_NAME);
+//		DB::table($table)->truncate();
+//	}
+//}
+//
+//// Run our migrations and seed our fresh tables
+////Artisan::call('migrate');
+//Artisan::call('db:seed');

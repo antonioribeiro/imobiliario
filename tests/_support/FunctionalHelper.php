@@ -47,4 +47,11 @@ class FunctionalHelper extends \Codeception\Module
 		return TestDummy::create($model, $overrides);
 	}
 
+	public function setBrowserEnvironmentToTesting()
+	{
+		$I = $this->getModule('Laravel4');
+
+		$I->amOnPage('/environment/set/testing');
+	}
+
 }

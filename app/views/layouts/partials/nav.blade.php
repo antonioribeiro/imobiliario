@@ -46,6 +46,8 @@
 						</a>
 
 						<ul class="dropdown-menu" role="menu">
+							<li><a href="/@".$currentUser->username>Profile</a></li>
+							<li class="divider"></li>
 							<li><a href="/logout">Logout</a></li>
 						</ul>
 					</li>

@@ -2,7 +2,7 @@
 
 
 use Codeception\TestCase\Test;
-use Imobiliario\Statuses\StatusRepository;
+use Imobiliario\Domains\Statuses\StatusRepository;
 use Laracasts\TestDummy\Factory as TestDummy;
 
 class StatusRepositoryTest extends \Codeception\TestCase\Test
@@ -26,7 +26,7 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
     {
 		$users = TestDummy::times(2)->create('Imobiliario\Domains\Users\User');
 
-	    TestDummy::times(2)->create('Imobiliario\Statuses\Status', [
+	    TestDummy::times(2)->create('Imobiliario\Domains\Statuses\Status', [
 			'user_id' => $users[0]->id,
 	        'body' => 'My Status',
 		]);
@@ -44,7 +44,7 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
 	 */
 	public function it_saves_a_status_for_a_specific_user()
 	{
-		$status = TestDummy::create('Imobiliario\Statuses\Status', [
+		$status = TestDummy::create('Imobiliario\Domains\Statuses\Status', [
 			'body' => 'His Status',
 		]);
 

@@ -4,8 +4,8 @@ namespace Imobiliario\Domains\Ads;
 
 use h4kuna\NumberFormat;
 use Illuminate\Support\Str;
-use Laracasts\Presenter\Presenter;
+use Imobiliario\Core\BasePresenter;
 
-class AdPresenter extends Presenter {
+class AdPresenter extends BasePresenter {
 
 }

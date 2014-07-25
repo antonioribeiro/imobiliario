@@ -2,9 +2,9 @@
 
 namespace Imobiliario\Domains\Users;
 
-use Laracasts\Presenter\Presenter;
+use Imobiliario\Core\BasePresenter;
 
-class UserPresenter extends Presenter {
+class UserPresenter extends BasePresenter {
 
 	/**
 	 * Present the link to the user's gravatar.

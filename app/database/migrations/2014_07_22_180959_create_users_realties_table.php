@@ -17,6 +17,7 @@ class CreateUsersRealtiesTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id')->unsigned()->index();
 			$table->integer('realty_id')->unsigned()->index();
+			$table->boolean('deleted')->default(false)->index();
 			$table->boolean('favorited')->default(false)->index();
 			$table->boolean('watching')->default(false)->index();
 			$table->integer('rating')->unsigned()->default(0)->index();

@@ -5,7 +5,7 @@ Imobiliario\Domains\Users\User:
   created_at: $date
   updated_at: $date
 
-Imobiliario\Statuses\Status:
+Imobiliario\Domains\Statuses\Status:
   user_id:
     type: Imobiliario\Domains\Users\User
   body: $text

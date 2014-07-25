@@ -1,10 +1,10 @@
 <?php
 
-namespace Imobiliario\Domains\Users;
+namespace Imobiliario\Domains\UsersAds;
 
 use Imobiliario\Domains\Users\User;
 
-class UserRepository {
+class UserAdRepository {
 
 	public function save(User $user)
 	{

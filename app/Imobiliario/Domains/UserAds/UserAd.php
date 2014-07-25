@@ -1,6 +1,6 @@
 <?php
 
-namespace Imobiliario\Domains\Users;
+namespace Imobiliario\Domains\UsersAds;
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;

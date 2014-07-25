@@ -33,6 +33,18 @@ body {
     .status-post .status-post-submit .btn {
       float: right; }
 
+.users {
+  margin-bottom: 3em; }
+
+.users-block {
+  text-align: center; }
+  .users-block a {
+    text-decoration: none; }
+  .users-block :hover {
+    color: #000000; }
+  .users-block .avatar {
+    margin: auto; }
+
 .status-media {
   border: 1px solid #e3e3e3;
   background: white;

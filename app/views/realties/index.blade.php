@@ -23,10 +23,10 @@
 	{
 		id = jQuery(this).data('id');
 
-		$response = _request('ads/delete/'+id, this);
+		_request('realties/delete/'+id, this, 'deleteAd', id);
 	});
 
-	function _request(actionUrl, element)
+	function _request(actionUrl, element, method, id)
 	{
 		jQuery.ajax(
 		{
@@ -34,7 +34,7 @@
 			data: null,
 
 			success: function(data) {
-				return _processResponse(data, element);
+				return _processResponse(data, element, method, id);
 			},
 
 			error: function() {
@@ -43,13 +43,27 @@
 		});
 	}
 
-	function _processResponse(response, element)
+	function _processResponse(response, element, method, id)
 	{
 		if (typeof response.redirect !== 'undefined')
 		{
 			window.location = response.redirect;
 		}
 
-		return response;
+		if (typeof response.success !== 'undefined' && response.success)
+		{
+			var fn = window[method];
+
+			if(typeof fn === 'function')
+			{
+				fn(response, element, id);
+			}
+		}
 	}
+
+	function deleteAd(response, element, id)
+	{
+		ad = jQuery('#ad-' + id).hide('slow');
+	}
+
 @stop

@@ -2,9 +2,9 @@
 
 namespace Imobiliario\Domains\Statuses;
 
-use Laracasts\Presenter\Presenter;
+use Imobiliario\Core\BasePresenter;
 
-class StatusPresenter extends Presenter {
+class StatusPresenter extends BasePresenter {
 
 	/**
 	 * Present the time since published in a human format
